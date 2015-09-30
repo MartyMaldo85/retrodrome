@@ -19,22 +19,22 @@
 
 		
 	</head>
-	<body>
-		<div id="wrapper" class="bg-tint">
+	<body class="fixed-back jaggies">
+		<div id="wrapper">
 			<header>
-				<nav class="blur">
+				<nav class="fixed-back blur">
 				<ul>
 					<li>
-						<img class="console-icon" src="assets/img/icon-nes.svg" alt="Nintendo Entertainment System controller icon">
+						<img class="console-icon fixed-back" src="assets/img/icon-nes.svg" alt="Nintendo Entertainment System controller icon">
 					</li>
 					<li>
-						<img class="console-icon" src="assets/img/icon-gb.svg" alt="GameBoy icon">
+						<img class="console-icon fixed-back" src="assets/img/icon-gb.svg" alt="GameBoy icon">
 					</li>
 					<li>
-						<img class="console-icon" src="assets/img/icon-snes.svg" alt="Super Nintendo controller icon">
+						<img class="console-icon fixed-back" src="assets/img/icon-snes.svg" alt="Super Nintendo controller icon">
 					</li>
 					<li>
-						<img class="console-icon" src="assets/img/icon-n64.svg" alt="Nintendo 64 controller icon">
+						<img class="console-icon fixed-back" src="assets/img/icon-n64.svg" alt="Nintendo 64 controller icon">
 					</li>
 				</ul>
 				<div id="drop-menu">
@@ -81,15 +81,18 @@
 				<div id="splash">
 					<img class="random-sprite" src="assets/img/game-themes/contra/sprite.gif" alt="sprite description injected here">
 					<span class="love">with &nbsp;<img class="heart" src="assets/img/icon-heart.svg" width="12" height="12" alt="heart icon">&nbsp; from 1985</span>
-					<div id="box">
-						<div class="container-1">
-							<input type="search" id="search" class="blur" placeholder="Search..." />
-							<!-- <img class="icon" src="assets/img/search.svg" alt="search icon"> -->
-						</div>
+					<div id="search-box">
+							<input id="search" type="search" placeholder="search..." />
+							<!-- <div id="results">
+								<ul class="fixed-back blur">
+									<li>test result 1</li>
+									<li>test result 2</li>
+									<li>test result 3</li>
+								</ul>
+							</div> -->
 					</div>
 					<!-- <div class="logo"></div> -->
 
-					<!-- <span class="scroll">[ &nbsp;s c r o l l&nbsp; ]</span> -->
 				</div>
 				<!-- game matrix start -->
 				<!-- <div id="game-matrix">
@@ -193,7 +196,7 @@
 				<!-- game matrix end -->
 				
 			</section>
-			<footer class="blur">
+			<footer class="fixed-back blur">
 					<p>footer info here</p>
 			</footer>
 		</div>

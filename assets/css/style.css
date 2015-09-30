@@ -1,21 +1,11 @@
 body {
 	background-image: url("../img/game-themes/contra/back.gif");
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 	background-color: #000;
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 	color: #fff;
 	font-size: 1em;
-	image-rendering: optimizeSpeed;             
-    image-rendering: -moz-crisp-edges;          
-    image-rendering: -o-crisp-edges;            
-    image-rendering: -webkit-optimize-contrast; 
-    image-rendering: pixelated;
-    image-rendering: optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
+	transition: all 0.4s ease;
 }
 
 div, span, p {
@@ -46,13 +36,50 @@ ul {
 	margin: 0;
 }
 
-li {
-	display: inline-block;
-}
-
 table, thead, tfoot, tr, td {
 	border: 1px solid white;
 	padding: 1em;
+	width: 100%;
+}
+
+.fixed-back {
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.jaggies {
+	image-rendering: optimizeSpeed;             
+	image-rendering: -moz-crisp-edges;          
+	image-rendering: -o-crisp-edges;            
+	image-rendering: -webkit-optimize-contrast; 
+	image-rendering: pixelated;
+	image-rendering: optimize-contrast;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+.blur {
+	background-color: rgba(0, 0, 0, .93);
+	background-image: url("../img/game-themes/contra/blur-dark.jpg");
+	opacity: .97;
+}
+
+#wrapper {
+	max-width: 64em;
+	width: 100%;
+	height: 1200px;
+	position: relative;
+	margin: auto;
+	padding-top: 1em;
+	background-color: rgba(0, 0, 0, .95);
+	box-shadow: 0 0 1.5em rgba(0, 0, 0, 1);
+}
+
+#content {
 	width: 100%;
 }
 
@@ -66,49 +93,6 @@ table, thead, tfoot, tr, td {
 	position: relative;
 }
 
-.scroll {
-	position: relative;
-	position: block;
-	text-transform: uppercase;
-}
-
-#wrapper {
-	max-width: 64em;
-	width: 100%;
-	height: 1200px;
-	bottom: 0;
-	position: relative;
-	margin: auto;
-	padding-top: 1em;
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	box-shadow: 0 0 1.5em rgba(0, 0, 0, 1);
-}
-
-#content {
-	width: 100%;
-}
-
-.bg-tint {
-	background-size: 100%;
-	background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, .95), rgba(0, 0, 0, .95)); /*top gradient*/
-	background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, .95), rgba(0, 0, 0, .95));
-	background-image: linear-gradient(0deg, rgba(0, 0, 0, .95), rgba(0, 0, 0, .95));
-}
-
-/*.bg-tint {
-	background-image: url("../img/back.jpg");
-	background-size: 100%;
-	background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/back.jpg");
-	background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/back.jpg");
-	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/back.jpg");
-}*/
-
 nav {
 	width: 100%;
 	max-width: 64em;
@@ -116,21 +100,15 @@ nav {
 	margin: auto;
 	top: 0;
 	border-bottom: .075em solid rgba(50, 50, 50, .5);
-	/*transition: all 0.1s ease;*/
+	
 	z-index: 1;
 }
 
-#drop-menu {
-	width: 32em;
-	position: fixed;
-	/*display: none;*/
-	background-color: gray;
-	top: 7.5em;
-	margin-left: 50%;
-	left: -16em;
+nav > ul > li {
+	display: inline-block;
 }
 
-.console-icon {
+img.console-icon {
 	width: 3.125em;
 	height: 3.125em;
 	padding: 1em;
@@ -139,17 +117,74 @@ nav {
 	border: .075em solid rgba(50, 50, 50, 0);
 }
 
-.console-icon:hover {
+img.console-icon:hover {
 	background-color: rgba(255, 255, 255, .09);
-	border-radius: 50%;
 	cursor: pointer;
 	background-image: url("../img/game-themes/contra/blur.jpg");
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 	background-color: #000;
 	border: .075em solid rgba(50, 50, 50, .5);
+}
+
+#drop-menu {
+	width: 32em;
+	position: fixed;
+	background-color: gray;
+	top: 7.5em;
+	margin-left: 50%;
+	left: -16em;
+}
+
+img.random-sprite {
+	position: relative;
+	display: block;
+	margin: 25% auto 1em auto;
+}
+
+.love {
+	position: relative;
+	display: block;
+	text-transform: uppercase;
+	font-size: .75em;
+	letter-spacing: .5em;
+	margin-bottom: 3em;
+}
+
+img.heart {
+	margin-left: -.35em;
+}
+
+input#search{
+	background-color: rgba(0, 0, 0, .5);
+	position: relative;
+	margin: auto;
+	width: 300px;
+	height: 50px;
+	border: none;
+	padding-left: 1.75em;
+	border-radius: .25em;
+	border: .075em solid rgba(50, 50, 50, .5);
+	box-sizing: border-box;
+	-webkit-transition: background .25s ease;
+	-moz-transition: background .25s ease;
+	-ms-transition: background .25s ease;
+	-o-transition: background .25s ease;
+	transition: background .25s ease;
+}
+
+input#search:hover, input#search:focus, input#search:active {
+	outline:none;
+	background: rgba(50, 50, 50, .75);
+}
+
+#search-box {
+	max-width: 300px;
+	margin: auto;
+}
+
+#results ul li {
+	text-align: left;
+	border-bottom: .075em solid rgba(50, 50, 50, .5);
+	padding: 1em;
 }
 
 #game-matrix {
@@ -166,26 +201,14 @@ img.box-art {
 	border-radius: 4px;
 }
 
-img.random-sprite {
-	position: relative;
-	display: block;
-	margin: 25% auto 1em auto;
-}
-
-img.heart {
-	margin-left: -.3em;
-}
-
 .game-entry {
 	height: auto;
 	display: inline-block;
 	margin: 1.5em;
 	position: relative;
-	
 	text-align: left;
 	vertical-align: top;
 	cursor: pointer;
-
 	transition: all 0.1s ease;
 }
 
@@ -253,76 +276,11 @@ footer {
 	z-index: 1;
 }
 
-
-.blur {
-	background-color: rgba(0, 0, 0, .93);
-	background-image: url("../img/game-themes/contra/blur-dark.jpg");
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	opacity: .97;
-
-	/*-webkit-filter: blur(20px);
-	-moz-filter: blur(20px);
-	-o-filter: blur(20px);
-	-ms-filter: blur(20px);
-	filter: blur(20px);*/
-}
-
-.fixed {
-	position: fixed;
-}
-
-
-.love {
-	position: relative;
-	display: block;
-	text-transform: uppercase;
-	font-size: .75em;
-	letter-spacing: .5em;
-	margin-bottom: 3em;
-}
-
-.container-1{
-	margin: auto;
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
-}
-
-.container-1 input#search{
-	position: relative;
-	margin: auto;
-	width: 265px;
-	height: 50px;
-	border: none;
-	padding-left: 2em;
-	border-radius: .25em;
-	border: .075em solid rgba(50, 50, 50, .5);
- 
-   
-	-webkit-transition: background .25s ease;
-	-moz-transition: background .25s ease;
-	-ms-transition: background .25s ease;
-	-o-transition: background .25s ease;
-	transition: background .25s ease;
-}
-
-.container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
-	outline:none;
-	background: rgba(50, 50, 50, .75);;
-}
-
 @media screen and (max-width: 24em) {
 	.console-icon {
 		width: 2.250em;
 		height: 2.250em;
 		padding: .75em;
 		margin: .5em .5em 0em .5em;
-}
+	}
 }
