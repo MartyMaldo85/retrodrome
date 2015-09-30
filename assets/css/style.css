@@ -37,9 +37,13 @@ ul {
 }
 
 table, thead, tfoot, tr, td {
-	border: 1px solid white;
+	border: .075em solid rgba(50, 50, 50, .5);
 	padding: 1em;
 	width: 100%;
+}
+
+td {
+	width: 25%;
 }
 
 .fixed-back {
@@ -75,6 +79,7 @@ table, thead, tfoot, tr, td {
 	position: relative;
 	margin: auto;
 	padding-top: 1em;
+	border: .075em solid rgba(50, 50, 50, .5);
 	background-color: rgba(0, 0, 0, .95);
 	box-shadow: 0 0 1.5em rgba(0, 0, 0, 1);
 }
@@ -128,10 +133,15 @@ img.console-icon:hover {
 #drop-menu {
 	width: 32em;
 	position: fixed;
-	background-color: gray;
 	top: 7.5em;
 	margin-left: 50%;
 	left: -16em;
+	display: none;
+}
+
+#drop-menu table thead {
+	background-color: #fff;
+	color: #000;
 }
 
 img.random-sprite {
@@ -185,6 +195,7 @@ input#search:hover, input#search:focus, input#search:active {
 	text-align: left;
 	border-bottom: .075em solid rgba(50, 50, 50, .5);
 	padding: 1em;
+	display: none;
 }
 
 #game-matrix {
@@ -193,6 +204,7 @@ input#search:hover, input#search:focus, input#search:active {
 	flex-wrap: wrap;
 	justify-content: flex-start !important;
 	text-align: center;
+	display: none;
 }
 
 img.box-art {
