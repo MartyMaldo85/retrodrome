@@ -24,6 +24,7 @@ a:hover {
 	text-decoration: none;
 	padding: 3px 8px 3px 8px;
 	margin-left: -9px;
+	cursor: pointer;
 }
 
 a:visited {
@@ -38,7 +39,7 @@ ul {
 
 table, thead, tfoot, tr, td {
 	border: .075em solid rgba(50, 50, 50, .5);
-	padding: 1em;
+	padding: .5em;
 	width: 100%;
 }
 
@@ -72,6 +73,10 @@ td {
 	opacity: .97;
 }
 
+.active {
+	display: block;
+}
+
 #wrapper {
 	max-width: 64em;
 	width: 100%;
@@ -79,7 +84,6 @@ td {
 	position: relative;
 	margin: auto;
 	padding-top: 1em;
-	border: .075em solid rgba(50, 50, 50, .5);
 	background-color: rgba(0, 0, 0, .95);
 	box-shadow: 0 0 1.5em rgba(0, 0, 0, 1);
 }
@@ -136,12 +140,41 @@ img.console-icon:hover {
 	top: 7.5em;
 	margin-left: 50%;
 	left: -16em;
+	border-radius: .25em;
+	overflow: hidden;
 	display: none;
+}
+
+img.section-icon {
+	width: 2em;
+	height: 2em;
+	display: block;
+	margin: auto;
+	margin-bottom: .25em;
 }
 
 #drop-menu table thead {
 	background-color: #fff;
 	color: #000;
+}
+
+thead > tr > td {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+tbody > tr > td:hover {
+	background-color: #fff;
+	color: #000;
+	cursor: pointer;
+}
+
+tbody > tr > td:hover a {
+	background-color: #fff;
+	color: #000;
+	border: none;
+	padding: 0;
+	margin: 0;
 }
 
 img.random-sprite {
