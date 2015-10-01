@@ -354,7 +354,7 @@ footer {
 }
 
 @media screen and (max-width: 24em) {
-	.console-icon {
+	img.console-icon {
 		width: 2.250em;
 		height: 2.250em;
 		padding: .75em;
