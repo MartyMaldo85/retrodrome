@@ -255,12 +255,11 @@ h2.result-title {
 }
 
 #game-matrix {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-start !important;
+	display: relative;
 	text-align: center;
-	/*display: none;*/
+	/*flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start !important;*/
 }
 
 img.box-art, img.box-thumb {
@@ -274,7 +273,7 @@ img.box-thumb {
 	border-radius: 0;
 }
 
-.game-entry {
+article.game-entry {
 	height: auto;
 	display: inline-block;
 	margin: 1.5em;
@@ -286,11 +285,11 @@ img.box-thumb {
 }
 
 .game-entry:hover {
-	background-color: rgba(0, 0, 0, .3);
+	background: rgba(50, 50, 50, .75);
 	padding: 1em;
 	margin: 0em .5em .5em .5em;
 	border-radius: .25em;
-	box-shadow: 0 0 .5em rgba(0, 0, 0, .35);
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
 }
 
 .game-entry.active {
