@@ -215,7 +215,7 @@
 				
 			</section>
 			<footer class="fixed-back blur">
-					<span class="copyright">&copy; <?php echo date("Y") ?> Retrodrome. All rights reserved. Site designed and developed by <a href="http://www.martymaldo.com/" target="_blank">Martin Maldonado</a>.</span>
+					<span class="copyright">&copy; <?php echo date("Y") ?> Retrodrome. All rights reserved. Designed and purdy-fied by <a href="http://www.martymaldo.com/" target="_blank">Martin Maldonado</a>.</span>
 			</footer>
 		</div>
 

@@ -262,15 +262,17 @@ h2.result-title {
 	justify-content: flex-start !important;*/
 }
 
-img.box-art, img.box-thumb {
+img.box-art {
 	max-width: 10em;
 	height: auto;
 	border-radius: .25em;
 	vertical-align: top;
+	margin-bottom: .5em;
 }
 
 img.box-thumb {
 	border-radius: 0;
+	vertical-align: top;
 }
 
 article.game-entry {
@@ -284,7 +286,7 @@ article.game-entry {
 	transition: all 0.1s ease;
 }
 
-.game-entry:hover {
+article.game-entry:hover {
 	background: rgba(50, 50, 50, .75);
 	padding: 1em;
 	margin: 0em .5em .5em .5em;
@@ -292,7 +294,7 @@ article.game-entry {
 	box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
 }
 
-.game-entry.active {
+article.game-entry.active {
 	background-color: rgba(0, 0, 0, .95);
 	padding: 1em;
 	margin: 0;
@@ -309,11 +311,11 @@ article.game-entry {
 
 h2.title {
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 700;
 	display: relative;
 }
 
-.game-entry .meta{
+article.game-entry .meta{
 	display: block;
 	width: 10em;
 	position: static;
@@ -321,11 +323,11 @@ h2.title {
 	right: 0;
 }
 
-.game-entry.active .meta{
+article.game-entry.active .meta{
 	text-align: left;
 }
 
-.game-entry .title {
+article.game-entry .title {
 	width: inherit;
 	margin: 0;
 	padding: 0;
@@ -358,5 +360,22 @@ footer {
 		height: 2.250em;
 		padding: .75em;
 		margin: .5em .5em 0em .5em;
+	}
+
+	h2.title {
+		font-size: .75em;
+		line-height: 1.25em;
+	}
+
+	.year, .publisher {
+		font-size: .5em;
+	}
+
+	img.box-art {
+		max-width: 6em;
+	}
+
+	article.game-entry .meta{
+		width: 6em;
 	}
 }
