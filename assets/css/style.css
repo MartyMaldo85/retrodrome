@@ -146,6 +146,7 @@ img.console-icon:hover {
 	left: -16em;
 	border-radius: .25em;
 	overflow: hidden;
+	box-shadow: 0 0 .75em rgba(0, 0, 0, .75);
 	display: none;
 }
 
@@ -168,14 +169,12 @@ thead > tr > td {
 }
 
 tbody > tr > td:hover {
-	background-color: #fff;
-	color: #000;
+	background: rgba(50, 50, 50, .75);
+	color: #fff;
 	cursor: pointer;
 }
 
 tbody > tr > td:hover a {
-	background-color: #fff;
-	color: #000;
 	border: none;
 	padding: 0;
 	margin: 0;
