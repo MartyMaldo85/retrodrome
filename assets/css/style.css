@@ -210,6 +210,7 @@ input#search{
 	border-radius: .25em;
 	border: .075em solid rgba(50, 50, 50, .5);
 	box-sizing: border-box;
+	-webkit-appearance: none;
 }
 
 input#search:hover, input#search:focus, input#search:active {
