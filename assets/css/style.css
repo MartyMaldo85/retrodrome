@@ -62,10 +62,10 @@ td {
 }
 
 .jaggies {
-	image-rendering: optimizeSpeed;             
-	image-rendering: -moz-crisp-edges;          
-	image-rendering: -o-crisp-edges;            
-	image-rendering: -webkit-optimize-contrast; 
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
 	image-rendering: pixelated;
 	image-rendering: optimize-contrast;
 	-ms-interpolation-mode: nearest-neighbor;
@@ -107,7 +107,7 @@ td {
 	position: relative;
 }
 
-nav {
+#page-header nav {
 	width: 100%;
 	max-width: 64em;
 	position: fixed;
@@ -117,7 +117,7 @@ nav {
 	z-index: 1;
 }
 
-nav > ul > li {
+#page-header nav > ul > li {
 	display: inline-block;
 }
 
@@ -215,7 +215,6 @@ input#search{
 input#search:hover, input#search:focus, input#search:active {
 	outline:none;
 	border: .075em solid #fff;
-	
 }
 
 #search-box {
