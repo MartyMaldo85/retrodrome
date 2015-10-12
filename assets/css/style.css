@@ -74,7 +74,7 @@ td {
 .blur {
 	background-color: rgba(0, 0, 0, .93);
 	background-image: url("../img/game-themes/contra/blur-dark.jpg");
-	opacity: .97;
+	opacity: .98;
 }
 
 .active {
@@ -90,14 +90,14 @@ td {
 	padding-top: 1em;
 	background-color: rgba(0, 0, 0, .95);
 	box-shadow: 0 0 1.5em rgba(0, 0, 0, 1);
+	padding: 8em 0em 8em 0em;
 }
 
 #content {
 	width: 100%;
-	padding-bottom: 8em;
 }
 
-.logo {
+/*.logo {
 	width: 5em;
 	height: 5em;
 	border-radius: 50%;
@@ -105,7 +105,7 @@ td {
 	margin: auto;
 	margin-bottom: 24em;
 	position: relative;
-}
+}*/
 
 #page-header nav {
 	width: 100%;
@@ -163,18 +163,18 @@ img.section-icon {
 	color: #000;
 }
 
-thead > tr > td {
+#drop-menu thead > tr > td {
 	text-transform: uppercase;
 	font-weight: 700;
 }
 
-tbody > tr > td:hover {
+#drop-menu tbody > tr > td:hover {
 	background: rgba(50, 50, 50, .75);
 	color: #fff;
 	cursor: pointer;
 }
 
-tbody > tr > td:hover a {
+#drop-menu tbody > tr > td:hover a {
 	border: none;
 	padding: 0;
 	margin: 0;
@@ -183,7 +183,7 @@ tbody > tr > td:hover a {
 img.random-sprite {
 	position: relative;
 	display: block;
-	margin: 25% auto 1em auto;
+	margin: 10% auto 1em auto;
 }
 
 .love {
@@ -262,6 +262,11 @@ h2.result-title {
 }
 
 img.box-art {
+	max-width: 16em;
+	display: inline-block;
+}
+
+img.matrix-thumb {
 	max-width: 10em;
 	height: auto;
 	border-radius: .25em;
@@ -338,6 +343,37 @@ article.game-entry .title {
 
 .publisher {
 	margin-top: -1em;
+}
+
+#info-box {
+	padding: 0em 2em 0em 2em;
+}
+
+#info-box img.box-art {
+	padding-right: 1em;
+	margin-top: 1em;
+}
+
+#info {
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+}
+
+#info .blurb, #info h1 {
+	text-align: left;
+}
+
+#info table {
+	max-width: 20em;
+}
+
+#info td:nth-child(odd) {
+	text-align: right;
+}
+
+#info td:nth-child(even) {
+	text-align: left;
 }
 
 footer {
